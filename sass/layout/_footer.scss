@@ -1,0 +1,118 @@
+.footer-principal {
+    padding: 48px 32px 48px 32px;
+    background-color: black;
+
+    @include breakpoint(tablet) {
+        padding: 56px 40px 56px 39px;
+        display: flex;
+    }
+
+    @include breakpoint(desktop) {
+        padding: 80px 165px 80px 165px
+    }
+
+    &__logo {
+
+        box-sizing: content-box;
+        width: 110.05px;
+        height: 40px;
+        padding-bottom: 38px;
+
+        @include breakpoint(tablet) {
+            padding-right: 64.95px;
+        }
+
+        @include breakpoint(desktop) {
+            padding-right: 140.43px;
+        }
+    }
+
+    &__info {
+        padding-bottom: 38px;
+        color: white;
+        font-family: $secondary-font;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        box-sizing: border-box;
+
+        @include breakpoint(tablet) {
+            width: 281px;
+            margin-right: auto;
+        }
+
+        @include breakpoint(desktop) {
+            width: 430px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    &__redes-sociales {
+        display: flex;
+        gap: 20px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.footer-location {
+    padding: 48px 32px 48px 32px;
+    background-color: $gold;
+
+    @include breakpoint(tablet) {
+        padding: 56px 40px 56px 39px;
+        display: flex;
+        gap: 64.95px;
+    }
+
+    @include breakpoint(desktop) {
+        padding: 80px 165px 80px 165px;
+        display: flex;
+        gap: 140.43px;
+    }
+
+    &__logo {
+        box-sizing: content-box;
+        width: 110.05px;
+        height: 40px;
+        filter: brightness(0);
+        padding-bottom: 38px;
+    }
+
+    &__info {
+        font-family: $secondary-font;
+        font-size: 16px;
+        line-height: 26px;
+        padding-bottom: 38px;
+        color: $almost-black;
+
+        @include breakpoint(tablet) {
+            width: 281px;
+        }
+
+        @include breakpoint(desktop) {
+            width: 430px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    &__redes-sociales {
+        display: flex;
+        gap: 20px;
+
+        @include breakpoint(tablet) {
+            margin-left: auto;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0);
+        }
+    }
+}

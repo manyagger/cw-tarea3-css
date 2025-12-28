@@ -1,0 +1,94 @@
+.gallery2 {
+    padding-bottom: 120px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include breakpoint(tablet) {
+            height: 720px;
+            display: grid;
+            grid-template-columns: 1fr 280px;
+        }
+
+        @include breakpoint(desktop) {
+            grid-template-columns: 1fr 445px;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+
+        &-1 {
+            @include breakpoint(tablet) {
+                grid-row: 1 / span 2;
+                height: 100%;
+            }
+        }
+
+        &-2 {
+            height: 200px;
+            width: 100%;
+    
+            background-color: red;
+            @include breakpoint(tablet) {
+                height: 100%;
+            }
+
+            @include breakpoint(desktop){
+
+                background-color: red;
+            }
+
+
+        }
+    }
+
+    &__item {
+        padding: 48px 24px 47px 24px;
+        background-color: black;
+
+        @include breakpoint(tablet) {
+            padding: 85px 28px 85px 29px;
+
+        }
+
+        @include breakpoint(desktop) {
+            padding: 65px 47px 64px 48px;
+        }
+
+    }
+
+    &__title {
+        color: white;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        padding-bottom: 24px;
+
+        @include breakpoint(desktop) {
+            font-size: 60px;
+            line-height: 60px;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__subtitle {
+        color: white;
+        font-family: $secondary-font;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+
+        @include breakpoint(desktop) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+
+
+}

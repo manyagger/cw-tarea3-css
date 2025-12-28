@@ -1,0 +1,84 @@
+.our-location {
+
+    padding-top: 48px;
+    padding-bottom: 56px;
+    background-color: black;
+
+    @include breakpoint(tablet) {
+        padding-top: 88px;
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint(desktop) {
+        padding-top: 104px;
+        padding-bottom: 128px;
+    }
+
+    &__item {
+        @include breakpoint(tablet) {
+            display: flex;
+            gap: 68px;
+        }
+
+        @include breakpoint(desktop) {
+            gap: 220px;
+        }
+    }
+
+    &__title {
+        color: white;
+        font-size: 50px;
+        line-height: 45px;
+        padding-bottom: 48px;
+
+        @include breakpoint(tablet) {
+            font-size: 55px;
+            line-height: 50px;
+        }
+
+        @include breakpoint(desktop) {
+            font-size: 70px;
+            line-height: 70px;
+        }
+    }
+
+    &__street {
+        color: $gold;
+        font-size: 32px;
+        line-height: 32px;
+        padding-bottom: 20px;
+
+        @include breakpoint(desktop) {
+            font-size: 36px;
+            line-height: 36px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &__direction {
+        color: white;
+        font-family: $secondary-font;
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 20px;
+
+        @include breakpoint(desktop) {
+            font-size: 22px;
+            line-height: 32px;
+            padding-bottom: 32px;
+
+        }
+    }
+
+    &__description {
+        color: white;
+        font-family: $secondary-font;
+        font-size: 18px;
+        line-height: 28px;
+
+        @include breakpoint(desktop) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}

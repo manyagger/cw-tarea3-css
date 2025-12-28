@@ -1,0 +1,49 @@
+.header-principal {
+    margin-bottom: 120px;
+
+    &__img-mobile {
+        padding-bottom: 32px;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+}
+
+.header-location {
+    height: 550px;
+    position: relative;
+
+
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: url("/img/map.png");
+        filter: brightness(0.7) contrast(2.5) saturate(0);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__icono-location {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__back-button {
+        @include breakpoint(tablet) {
+            margin-left: 39px;
+        }
+
+        @include breakpoint(desktop) {
+            margin-left: 156px;
+        }
+    }
+}

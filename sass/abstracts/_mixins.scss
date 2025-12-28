@@ -1,0 +1,78 @@
+@mixin breakpoint($bp) {
+
+  @if $bp ==mobile {
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp ==tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp ==tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp ==desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp ==desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button() {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  gap: 35px;
+
+  &_img {
+    width: 18px;
+    height: 24px;
+    background-color: $gold;
+    padding: 20px;
+    box-sizing: content-box;
+  }
+}
+
+@mixin button1() {
+  @include button();
+  padding-left: 32px;
+  &:hover {
+    background-color: $gold;
+    .button1_img {
+      background-color: black;
+    }
+  }
+}
+
+@mixin button2() {
+  padding-right: 32px;
+  @include button();
+  &:hover {
+    background-color: $gold;
+    .button2_img {
+      background-color: black;
+    }
+  }
+}

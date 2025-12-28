@@ -1,0 +1,92 @@
+.hero {
+    @include breakpoint(tablet) {
+        background-image: url("/img/header-img.png");
+        background-size: 57%;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    @include breakpoint(desktop) {
+        height: 800px;
+        background-size: 33% 800px;
+        background-position: center center;
+        background-size: contain;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 800px;
+            width: 50%;
+            background: black;
+            z-index: -1;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include breakpoint(tablet) {
+            width: 339px;
+            padding-top: 145px;
+            padding-bottom: 145px;
+            margin-left: auto;
+        }
+
+        @include breakpoint(desktop) {
+            width: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    &__title {
+        font-size: 60px;
+        line-height: 55px;
+        letter-spacing: 0px;
+
+        @include breakpoint(tablet) {
+            font-size: 70px;
+            line-height: 65px;
+        }
+
+        @include breakpoint(desktop) {
+            color: white;
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
+            font-size: 96px;
+            line-height: 88px;
+
+        }
+    }
+
+    &__subtitle {
+        font-family: $secondary-font;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+
+        @include breakpoint(desktop) {
+            grid-column: 2;
+            grid-row: 1;
+            width: 350px;
+            font-size: 22px;
+            line-height: 32px;
+            justify-self: end;
+        }
+    }
+
+    &__buttons {
+        @include breakpoint(desktop) {
+            grid-column: 2;
+            grid-row: 2;
+            width: 350px;
+            justify-self: end;
+        }
+    }
+
+
+}
